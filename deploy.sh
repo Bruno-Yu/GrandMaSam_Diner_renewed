@@ -11,7 +11,7 @@ cd dist
 
 # 部署到自定义域域名
 # echo 'www.example.com' > CNAME
- echo 'grandmasam_diner_renewed.brunoyu.com' 
+ echo 'grandmasam_diner_renewed.brunoyu.com'  > CNAME
 
 git init
 git add -A
