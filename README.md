@@ -12,9 +12,9 @@ Cheers
 
 ---
 
-### 頁面連結 ( Demo page - built via GitHub page link )
+### 頁面連結 ( Demo page - built on a private domain )
 
-連結: [https://bruno-yu.github.io/GrandMaSam_Diner/#/](https://bruno-yu.github.io/GrandMaSam_Diner/#/)
+連結: [http://grandmasam_diner_renewed.brunoyu.com/](http://grandmasam_diner_renewed.brunoyu.com/)
 
 ---
 
@@ -29,73 +29,73 @@ Cheers
 
 ### 頁面展示說明 ( Demo. & Descript. )
 
-( *註: 為保護當事人，以下圖片有進行和諧化處理*  )
+( _註: 為保護當事人，以下圖片有進行和諧化處理_ )
 
 **首頁 ( Index Page )**
 
-* 和諧化技術
+- 和諧化技術
   ( Entrance index page built )
-* 關鍵字放大再放大功能
+- 關鍵字放大再放大功能
   ( Emphasize the main points by enlarging certain words )
 
 ![1651290242267.png](image/README/1651290242267.png)
 
 **商品類別功能 ( Sorted by Categories Func. )**
 
-* 挑選使用者嗜好功能
+- 挑選使用者嗜好功能
   ( Categories Func. )
 
 ![1651290313078.png](image/README/1651290313078.png)
 
 **產品頁面說明 ( Product detail info. page )**
 
-* 誘導使用者加入購物車的鮮明陰影設置
+- 誘導使用者加入購物車的鮮明陰影設置
   ( Detail the chosen product info for users. )
 
 ![1651290474769.png](image/README/1651290474769.png)
 
 **產品推薦建議 ( Recommended products area )**
 
-* 類似產品推坑建議
+- 類似產品推坑建議
   ( Similar products recommendation )
 
 ![1651290840733.png](image/README/1651290840733.png)
 
 **購物車視窗功能 ( Shopping Cart content reminder Func. )**
 
-* 告知使用者購買商品資訊/價格，友善提醒他們要有足夠的錢才能購買
+- 告知使用者購買商品資訊/價格，友善提醒他們要有足夠的錢才能購買
   ( inform users for the detail content of the shopping cart along with the total amount )
-* 有人抄襲才有用的奇怪聲明
+- 有人抄襲才有用的奇怪聲明
   ( Proper notice of the copy right statement )
 
 ![1651291060567.png](image/README/1651291060567.png)
 
 **企業社會責任頁面 Coroporate Social Responsibility page**
 
-* 提供使用者CSR 功能
+- 提供使用者 CSR 功能
   ( Save the poor author save the world )
 
 ![1651291265378.png](image/README/1651291265378.png)
 
 **響應式網頁設計 ( RWD Responsive Web Design )**
 
-* 大俠愛吃漢堡寶選單功能
+- 大俠愛吃漢堡寶選單功能
   ( Toggleable menu for mobile screen )
-* 適當表達感謝功能
+- 適當表達感謝功能
   ( Decent manners shown )
 
 ![1651291435225.png](image/README/1651291435225.png)
 
 **後臺公告最新資訊功能 ( Billboard for Admin to update posts to users )**
 
-* 讓管理員公告奇怪產品的展示頁面
+- 讓管理員公告奇怪產品的展示頁面
   ( The billboard space for admin to demo some news for users )
 
 ![1651291806099.png](image/README/1651291806099.png)
 
 **404 頁面功能 404 page / Not Found Notice**
 
-* 適當提醒使用者並無此頁的功能
+- 適當提醒使用者並無此頁的功能
   ( 404 page deigned for users if they were using wrong router links )
 
 ![1651292041412.png](image/README/1651292041412.png)
