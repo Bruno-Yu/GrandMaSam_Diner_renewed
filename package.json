@@ -45,5 +45,6 @@
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0"
-  }
+  },
+  "homepage": "https://bruno-yu.github.io/GrandMaSam_Diner_renewed"
 }
