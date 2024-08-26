@@ -8,7 +8,7 @@
           tabindex="-1"
           :aria-disabled="!hasPre"
           @click.prevent="emitData(currentPage - 1)"
-          >上吐</a
+          >上一頁</a
         >
       </li>
 
@@ -18,16 +18,10 @@
         :key="index"
         :class="{ active: num === currentPage }"
       >
-        <span class="page-link link-dark fw-bold" v-if="num === currentPage">{{
+        <span class="page-link link-dark fw-bold" v-if="num === currentPage">{{ num }}</span>
+        <a class="page-link link-dark fw-bold" href="#" v-else @click.prevent="emitData(num)">{{
           num
-        }}</span>
-        <a
-          class="page-link link-dark fw-bold"
-          href="#"
-          v-else
-          @click.prevent="emitData(num)"
-          >{{ num }}</a
-        >
+        }}</a>
       </li>
 
       <li class="page-item" :class="{ disabled: !hasNext }">
@@ -36,7 +30,7 @@
           href="#"
           :aria-disabled="!hasNext"
           @click.prevent="emitData(currentPage + 1)"
-          >下瀉</a
+          >下一頁</a
         >
       </li>
     </ul>

@@ -7,10 +7,10 @@
   ></PageLoading>
   <CartModal ref="CartModal" />
   <CartMessage ref="cartMessage" />
-  <div class="container  bg-warning">
+  <div class="container bg-warning">
     <div class="row row-cols-1 row-cols-lg-2 g-1 my-1">
       <div class="col col-lg-6">
-        <div class="container  px-2 py-4 p-sm-5 bg-warning rounded">
+        <div class="container px-2 py-4 p-sm-5 bg-warning rounded">
           <div class="row ps-2 row-cols-1">
             <div class="col m-auto">
               <h2
@@ -18,25 +18,15 @@
               >
                 產品/服務列表
               </h2>
-              <p class="fs-3 text-dark text-sm-nowrap font-Noto fw-600 ">
-                廚師介紹
+              <p class="fs-3 text-dark text-sm-nowrap font-Noto fw-600">廚師介紹</p>
+              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow">
+                <span class="d-none d-md-inline">五腥出品，</span>來自嘉義明雄的米其林廚師帶來的味道
               </p>
-              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow
-">
-                <span class="d-none d-md-inline">五腥出品，</span
-                >來自嘉義明雄的米其林廚師帶來的味道
+              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow">
+                而每份<span class="d-none d-md-inline">他所帶來的</span>食物，都有屬於食材自己的故事
               </p>
-              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow
-">
-                而每份<span class="d-none d-md-inline">他所帶來的</span
-                >食物，都有屬於食材自己的故事
-              </p>
-              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow
-
-">
-                只要您用心品嘗，一定能嚐出嘉明<span
-                  class=" d-none d-md-inline font-Noto
-"
+              <p class="fs-5 text-sm-nowrap font-Noto fw-550 text-bg-productsView-yellow">
+                只要您用心品嘗，一定能嚐出嘉明<span class="d-none d-md-inline font-Noto"
                   >( 嘉義民雄 )</span
                 >的味道
               </p>
@@ -50,19 +40,13 @@
   <div class="container mb-5 mt-md-5 mt-3 mb-7">
     <div class="row">
       <div class="col-md-2">
-        <div
-          class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-1"
-        >
+        <div class="border border-bottom border-top-0 border-start-0 border-end-0 mb-3 mx-1">
           <div class="card border-0">
             <div
               class="card-header px-0 py-4 bg-white border border-bottom-0 border-top border-start-0 border-end-0 rounded-0"
             >
-              <div
-                class="d-flex justify-content-between align-items-center pe-1 my-2"
-              >
-                <h4 class="fw-bold">
-                  類別 <span class="text-secondary small"> ▽ </span>
-                </h4>
+              <div class="d-flex justify-content-between align-items-center pe-1 my-2">
+                <h4 class="fw-bold">類別 <span class="text-secondary small"> ▽ </span></h4>
               </div>
               <div class="card-body p-0">
                 <ul class="list-group">
@@ -75,11 +59,7 @@
                       未亡人系列
                     </button>
                   </li>
-                  <li
-                    class="list-group-item p-0"
-                    v-for="(cat, key) in categories"
-                    :key="key"
-                  >
+                  <li class="list-group-item p-0" v-for="(cat, key) in categories" :key="key">
                     <button
                       type="button"
                       class="fw-bold btn btn-light h-100 w-100 p-2"
@@ -101,9 +81,7 @@
       <div class="col-md-10">
         <div class="row row-cols-1 row-cols-lg-3">
           <div class="col p-2" v-for="product in products" :key="product.id">
-            <div
-              class="card border-0 mb-2 p-2 g-1 shadow overall position-relative"
-            >
+            <div class="card border-0 mb-2 p-2 g-1 shadow overall position-relative">
               <div class="cart-img-top">
                 <RouterLink
                   :to="{ path: `/productView/${product.id}` }"
@@ -121,16 +99,14 @@
                 </h5>
                 <div class="d-flex justify-content-between">
                   <div>
-                    <p class="card-text my-1 fw-bold">
-                      TWD {{ product.price }}
-                    </p>
+                    <p class="card-text my-1 fw-bold">TWD {{ product.price }}</p>
                     <p class="text-muted fw-light small my-auto">
                       <del> 原價TWD{{ product.origin_price }}</del>
                     </p>
                   </div>
                   <button
                     type="button"
-                    class="btn btn-warning fw-bolder border border-1 btn-sm p-2 my-auto "
+                    class="btn btn-warning fw-bolder border border-1 btn-sm p-2 my-auto"
                     @click="addToCart(product.id), getCart()"
                     :disabled="isLoadingItem === product.id"
                   >
@@ -156,20 +132,13 @@
                     ? removeFromFavorites(product.id)
                     : saveToFavorites(product.id)
                 "
-                ><i
-                  v-if="favorites.includes(product.id)"
-                  class="bi bi-heart-fill"
-                ></i>
+                ><i v-if="favorites.includes(product.id)" class="bi bi-heart-fill"></i>
                 <i v-else class="bi bi-heart" />
               </a>
             </div>
           </div>
           <!-- 固定按鈕 -->
-          <button
-            type="button"
-            class="btn"
-            @click="openCartModal(cartData)"
-          >
+          <button type="button" class="btn" @click="openCartModal(cartData)">
             <CartIcon :cartNum="cartNum" />
           </button>
         </div>
@@ -251,7 +220,7 @@ export default {
             originCategories.push(item.category);
           });
           this.categories = originCategories.filter(
-            (cat, index) => originCategories.indexOf(cat) === index,
+            (cat, index) => originCategories.indexOf(cat) === index
           );
           this.isLoading = false;
         })
@@ -314,10 +283,7 @@ export default {
       };
       this.isLoadingItem = id;
       this.$http
-        .post(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
-          { data },
-        )
+        .post(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`, { data })
         .then(() => {
           this.isLoadingItem = '';
           this.$refs.cartMessage.openModal(true);
@@ -331,10 +297,7 @@ export default {
   watch: {
     favorites: {
       handler() {
-        window.localStorage.setItem(
-          'favorites',
-          JSON.stringify(this.favorites),
-        );
+        window.localStorage.setItem('favorites', JSON.stringify(this.favorites));
       },
       deep: true,
     },

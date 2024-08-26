@@ -11,12 +11,7 @@
     <div class="modal-dialog">
       <div v-if="add" class="modal-content">
         <div class="modal-header bg-warning">
-          <h3
-            class="modal-title text-light font-Noto fw-550"
-            id="exampleModalLabel"
-          >
-            執行成功
-          </h3>
+          <h3 class="modal-title text-light font-Noto fw-550" id="exampleModalLabel">執行成功</h3>
           <button
             type="button"
             class="btn-close"
@@ -28,10 +23,8 @@
         <div class="modal-body">
           <div class="container pt-2 gx-2">
             <h5 class="fw-bold">
-              <span class="text-success"
-                ><i class="bi bi-check-circle"></i
-              ></span>
-              噗通! 商品如粑粑那樣成功落入購物車中
+              <span class="text-success"><i class="bi bi-check-circle"></i></span>
+              商品加入購物車中
             </h5>
           </div>
         </div>
@@ -39,7 +32,7 @@
           <div class="container gx-2 d-flex justify-content-center">
             <button
               type="button"
-              class="btn btn-warning mx-2 mb-1  p-2 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning mx-2 mb-1 p-2 border border-dark border-1 font-Noto fw-400"
               @click="closeModal"
             >
               好優
@@ -49,12 +42,7 @@
       </div>
       <div v-else class="modal-content">
         <div class="modal-header bg-danger">
-          <h3
-            class="modal-title text-light font-Noto fw-550"
-            id="exampleModalLabel"
-          >
-            刪除警示
-          </h3>
+          <h3 class="modal-title text-light font-Noto fw-550" id="exampleModalLabel">刪除警示</h3>
           <button
             type="button"
             class="btn-close"
@@ -130,15 +118,11 @@ export default {
     removeCart(all, id) {
       if (all) {
         this.$http
-          .delete(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/carts`,
-          )
+          .delete(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/carts`)
           .then(() => {});
       } else {
         this.$http
-          .delete(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
-          )
+          .delete(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`)
           .then(() => {
             // 取得購物車的資料
           });

@@ -44,12 +44,7 @@
           </div>
           <div class="mb-3">
             <label for="due_date">到期日</label>
-            <input
-              type="date"
-              class="form-control"
-              id="due_date"
-              v-model="couponShow.dueDate"
-            />
+            <input type="date" class="form-control" id="due_date" v-model="couponShow.dueDate" />
           </div>
           <div class="mb-3">
             <label for="price">折扣百分比</label>
@@ -72,20 +67,12 @@
                 v-model="couponShow.is_enabled"
                 id="is_enabled"
               />
-              <label class="form-check-label" for="is_enabled">
-                是否啟用
-              </label>
+              <label class="form-check-label" for="is_enabled"> 是否啟用 </label>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" @click="updateCoupon">
             {{ isNew ? '新增優惠卷' : '更新優惠券' }}
           </button>

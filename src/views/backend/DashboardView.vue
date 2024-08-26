@@ -11,7 +11,7 @@
       <BackNavbar />
     </div>
     <div class="row">
-      <RouterView v-if="verify"  />
+      <RouterView v-if="verify" />
     </div>
     <div class="row">
       <FrontFooter />
@@ -45,7 +45,7 @@ export default {
         .then((response) => {
           this.$httpMessageState(response, '登出');
           if (response.data.success) {
-            this.$router.push('/trueusLogin');
+            this.$router.push('/login');
             this.verify = false;
           }
         })
@@ -57,10 +57,7 @@ export default {
   },
   created() {
     this.isLoading = true;
-    const token = document.cookie.replace(
-      /(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/,
-      '$1',
-    );
+    const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     this.$http.defaults.headers.common.Authorization = `${token}`;
     this.$http
       .post(`${process.env.VUE_APP_API}/api/user/check`)
@@ -70,7 +67,7 @@ export default {
         this.isLoading = false;
       })
       .catch(() => {
-        this.$router.push('/trueusLogin');
+        this.$router.push('/login');
         this.isLoading = false;
       });
   },

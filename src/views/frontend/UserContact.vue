@@ -18,16 +18,13 @@
           </button>
         </div>
         <div class="col">
-          <button
-            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
-            type="button"
-          >
+          <button class="btn w-100 btn-warning rounded-2 border border-dark border-3" type="button">
             <p class="fs-4 font-Noto fw-600 my-2">填寫資訊</p>
           </button>
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3 "
+            class="btn w-100 btn-outline-secondary rounded-2 border border-body border-3"
             type="button"
             disabled
           >
@@ -37,21 +34,14 @@
       </div>
     </div>
     <div class="row mt-5 mb-3">
-      <h2
-        class="font-Noto fw-700 text-center text-md-start ps-md-5 text-warning"
-      >
+      <h2 class="font-Noto fw-700 text-center text-md-start ps-md-5 text-warning">
         步驟 2. 填寫資訊
       </h2>
     </div>
     <div
       class="row justify-content-center shadow my-5 bg-light border border-1 border-body rounded-3"
     >
-      <VForm
-        ref="form"
-        class="col-md-6  rounded-3 p-5"
-        v-slot="{ errors }"
-        @submit="onSubmit"
-      >
+      <VForm ref="form" class="col-md-6 rounded-3 p-5" v-slot="{ errors }" @submit="onSubmit">
         <div class="mb-3">
           <label for="email" class="form-label font-Noto fw-400">
             Email <span class="text-danger fw-bolder">*</span></label
@@ -145,10 +135,8 @@
 
           <button
             type="submit"
-            class="d-block btn btn-danger font-Noto fw-bold  shadow"
-            :disabled="
-              Object.keys(errors).length > 0 || cartData.carts.length === 0
-            "
+            class="d-block btn btn-danger font-Noto fw-bold shadow"
+            :disabled="Object.keys(errors).length > 0 || cartData.carts.length === 0"
           >
             送出訂單
           </button>
@@ -187,10 +175,7 @@ export default {
       // 局部讀取效果賦值對應id
       this.isLoadingItem = id;
       this.$http
-        .post(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
-          { data },
-        )
+        .post(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`, { data })
         .then(() => {
           this.getCart();
           this.isLoadingItem = '';

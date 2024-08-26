@@ -14,10 +14,7 @@
         @click="modalOn('new')"
         :disabled="isLoadingItem === 'New'"
       >
-        <span
-          class="spinner-grow spinner-grow-sm "
-          v-show="isLoadingItem === 'New'"
-        ></span>
+        <span class="spinner-grow spinner-grow-sm" v-show="isLoadingItem === 'New'"></span>
         建立新的產品
       </button>
     </div>
@@ -79,8 +76,9 @@
                     class="btn btn-outline-danger btn-sm"
                     :data-delete-id="key"
                     @click="modalOn('delete', item)"
-                    :disabled="isLoadingItem === item.id"
+                    disabled
                   >
+                    <!--     :disabled="isLoadingItem === item.id" -->
                     <span
                       class="spinner-grow spinner-grow-sm"
                       v-show="isLoadingItem === item.id"
@@ -150,7 +148,7 @@ export default {
     getData(page = 1) {
       this.$http
         .get(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/products?page=${page}`,
+          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/products?page=${page}`
         )
         .then((res) => {
           this.productsList = res.data.products;

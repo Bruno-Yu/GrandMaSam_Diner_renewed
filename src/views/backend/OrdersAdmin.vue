@@ -7,97 +7,81 @@
   ></PageLoading>
   <h2 class="my-5 ms-2 fw-bold text-center">訂單管理頁面</h2>
   <div class="p-5">
-  <table class="table mt-4 ">
-    <thead>
-      <tr>
-        <th scope="col">訂單號</th>
-        <th scope="col">下訂時間</th>
-        <th scope="col">Email</th>
-        <th scope="col">購買品項</th>
-        <th scope="col">應付金額</th>
-        <th scope="col">是否付款</th>
-        <th scope="col">編輯</th>
-      </tr>
-    </thead>
-    <tbody v-if="orders.length">
-      <tr
-        v-for="(item, key) in orders"
-        :key="key"
-        :class="{ 'text-secondary': !item.is_paid }"
-      >
-        <td>{{ item.id }}</td>
-        <td>{{ item.create_at }}</td>
-        <td v-if="item.user">{{ item.user.email }}</td>
-        <td>
-          <ul class="list-group-numbered">
-            <li
-              class="list-group-item"
-              v-for="(product, index) in item.products"
-              :key="index"
-            >
-              {{ product.product.title }} 數量：{{ product.qty }}
-              {{ product.product.unit }}
-            </li>
-          </ul>
-        </td>
-        <td class="text-right">{{ item.total }} 元</td>
-        <td>
-          <div class="form-check form-switch">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              :id="`switch${item.id}`"
-              v-model="item.is_paid"
-              @change="updatePaid(item)"
-            />
-            <label class="form-check-label" :for="`switch${item.id}`">
-              <span v-if="item.is_paid">已付款</span>
-              <span v-else>未付款</span>
-            </label>
-          </div>
-        </td>
-        <td>
-          <div class="btn-group">
-            <button
-              class="btn btn-outline-primary btn-sm"
-              type="button"
-              @click="openModal(item)"
-              :disabled="isLoadingItem === item.id"
-            >
-              <span
-                class="spinner-grow spinner-grow-sm"
-                v-show="isLoadingItem === item.id"
-              ></span>
-              檢視
-            </button>
-            <button
-              class="btn btn-outline-danger btn-sm"
-              type="button"
-              @click="openDelModal(item)"
-              :disabled="isLoadingItem === item.id"
-            >
-              <span
-                class="spinner-grow spinner-grow-sm"
-                v-show="isLoadingItem === item.id"
-              ></span>
-              刪除
-            </button>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th scope="col">訂單號</th>
+          <th scope="col">下訂時間</th>
+          <th scope="col">Email</th>
+          <th scope="col">購買品項</th>
+          <th scope="col">應付金額</th>
+          <th scope="col">是否付款</th>
+          <th scope="col">編輯</th>
+        </tr>
+      </thead>
+      <tbody v-if="orders.length">
+        <tr v-for="(item, key) in orders" :key="key" :class="{ 'text-secondary': !item.is_paid }">
+          <td>{{ item.id }}</td>
+          <td>{{ item.create_at }}</td>
+          <td v-if="item.user">{{ item.user.email }}</td>
+          <td>
+            <ul class="list-group-numbered">
+              <li class="list-group-item" v-for="(product, index) in item.products" :key="index">
+                {{ product.product.title }} 數量：{{ product.qty }}
+                {{ product.product.unit }}
+              </li>
+            </ul>
+          </td>
+          <td class="text-right">{{ item.total }} 元</td>
+          <td>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                :id="`switch${item.id}`"
+                v-model="item.is_paid"
+                @change="updatePaid(item)"
+              />
+              <label class="form-check-label" :for="`switch${item.id}`">
+                <span v-if="item.is_paid">已付款</span>
+                <span v-else>未付款</span>
+              </label>
+            </div>
+          </td>
+          <td>
+            <div class="btn-group">
+              <button
+                class="btn btn-outline-primary btn-sm"
+                type="button"
+                @click="openModal(item)"
+                :disabled="isLoadingItem === item.id"
+              >
+                <span
+                  class="spinner-grow spinner-grow-sm"
+                  v-show="isLoadingItem === item.id"
+                ></span>
+                檢視
+              </button>
+              <button
+                class="btn btn-outline-danger btn-sm"
+                type="button"
+                @click="openDelModal(item)"
+                :disabled="isLoadingItem === item.id"
+              >
+                <span
+                  class="spinner-grow spinner-grow-sm"
+                  v-show="isLoadingItem === item.id"
+                ></span>
+                刪除
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <OrderDetail
-    :order="orderShow"
-    ref="orderDetail"
-    @update-paid="updatePaid"
-  ></OrderDetail>
-  <OrderDelete
-    :order="orderShow"
-    ref="delModal"
-    @del-item="delOrder"
-  ></OrderDelete>
+  <OrderDetail :order="orderShow" ref="orderDetail" @update-paid="updatePaid"></OrderDetail>
+  <OrderDelete :order="orderShow" ref="delModal" @del-item="delOrder"></OrderDelete>
   <PaginationFooter
     :current-page="current_page"
     :has-pre="has_pre"

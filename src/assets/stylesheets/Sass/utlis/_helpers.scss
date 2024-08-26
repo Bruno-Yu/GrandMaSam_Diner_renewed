@@ -17,8 +17,8 @@ a :hover {
   color: rgb(150, 148, 148);
 }
 
-.navbar .navbar-nav .nav-link:hover  {
-  color:#ffc107!important;
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
   font-weight: normal;
 }
 
@@ -65,11 +65,10 @@ li > a a :active {
   font-weight: 900;
 }
 // yellow-bg text color and style
-.text-bg-yellow{
+.text-bg-yellow {
   -webkit-text-stroke: 0.3px black;
-color: white;
-
+  color: white;
 }
 .text-bg-productsView-yellow {
-  color: rgb(128, 107, 48);;
+  color: rgb(128, 107, 48);
 }

@@ -7,7 +7,7 @@
   ></PageLoading>
   <div class="container bg-warning">
     <div
-      class="header-banner row  p-3 mb-2 mt-4 bg-body d-flex align-items-center justify-content-center justify-content-lg-end slogan-style"
+      class="header-banner row p-3 mb-2 mt-4 bg-body d-flex align-items-center justify-content-center justify-content-lg-end slogan-style"
     >
       <div class="col-10 col-md-6 col-lg-4">
         <div class="d-flex justify-content-start">
@@ -26,7 +26,7 @@
         <div class="d-flex justify-content-center mt-4">
           <button
             type="button"
-            class="btn btn-warning link-dark fw-bold fs-4 border border-light border-1  font-Noto w-100 fw-700 me-lg-5"
+            class="btn btn-warning link-dark fw-bold fs-4 border border-light border-1 font-Noto w-100 fw-700 me-lg-5"
             @click="backToStore()"
           >
             <i>馬上行動</i>
@@ -34,22 +34,14 @@
         </div>
       </div>
     </div>
-    <div
-      class="row align-items-center my-3 shadow p-3 bg-body border-dark border-1"
-    >
+    <div class="row align-items-center my-3 shadow p-3 bg-body border-dark border-1">
       <div class="col">
         <div class="container">
-          <h2 class="fs-2 text-center my-4 text-warning font-Noto fw-700">
-            關於我們
-          </h2>
-          <p class="fs-4 text-center mb-0 font-Noto fw-500">
-            本餐廳的核心精神是:
-          </p>
+          <h2 class="fs-2 text-center my-4 text-warning font-Noto fw-700">關於我們</h2>
+          <p class="fs-4 text-center mb-0 font-Noto fw-500">本餐廳的核心精神是:</p>
           <p class="fs-4 text-center text-lg-nowrap font-Noto fw-700">
             <i>
-              自己的國家自己救!<span class="d-inline-block d-lg-inline"
-                >自己的碗盤自己洗!</span
-              >
+              自己的國家自己救!<span class="d-inline-block d-lg-inline">自己的碗盤自己洗!</span>
             </i>
           </p>
           <div class="container text-lg-center about-us-width">
@@ -68,10 +60,7 @@
       </div>
       <div class="col col-lg-5 m-auto text-auto">
         <div class="container p-5 mb-1 bg-warning rounded">
-          <h3
-            class="mt-4 text-center  text-lg-start font-Noto fw-550 text-bg-productsView-yellow
-"
-          >
+          <h3 class="mt-4 text-center text-lg-start font-Noto fw-550 text-bg-productsView-yellow">
             味道獨特
           </h3>
           <p class="text-dark font-Noto fw-500">
@@ -93,9 +82,7 @@
       </div>
     </div>
 
-    <div
-      class="row flex-row-reverse row-cols-1 row-cols-lg-2 bg-body my-3 shadow"
-    >
+    <div class="row flex-row-reverse row-cols-1 row-cols-lg-2 bg-body my-3 shadow">
       <div class="col-lg-6 my-2">
         <div class="product-intro-2" />
       </div>
@@ -123,19 +110,13 @@
       </div>
     </div>
     <div class="row row-cols-1 row-cols-lg-3 mt-2">
-      <div
-        class="col col-lg-3 d-none d-lg-block product-intro-3 product-intro-height"
-      />
+      <div class="col col-lg-3 d-none d-lg-block product-intro-3 product-intro-height" />
       <div class="col col-lg-6 product-intro-md product-intro-height">
         <div class="container">
-          <div
-            class="row d-flex justify-content-center align-items-center mt-5 h-100"
-          >
+          <div class="row d-flex justify-content-center align-items-center mt-5 h-100">
             <div class="col-10 text-light text-center">
               <h3 class="my-5 font-Noto fw-600">
-                獻出你的錢包，<span class="d-inline-block d-lg-inline"
-                  >讓台灣再次偉大</span
-                >
+                獻出你的錢包，<span class="d-inline-block d-lg-inline">讓台灣再次偉大</span>
               </h3>
               <p class="fs-1 text-warning">
                 <i class="bi bi-award"></i>
@@ -149,9 +130,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="col col-lg-3 d-none d-lg-block product-intro-4 product-intro-height"
-      />
+      <div class="col col-lg-3 d-none d-lg-block product-intro-4 product-intro-height" />
     </div>
   </div>
 </template>

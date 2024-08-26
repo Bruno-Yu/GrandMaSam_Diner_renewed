@@ -1,16 +1,14 @@
 <template>
   <div class="mb-5">
-<PageLoading
-  loader="bars"
-  :active="isLoading"
-  :can-cancel="true"
-  :is-full-page="false"
-></PageLoading>
+    <PageLoading
+      loader="bars"
+      :active="isLoading"
+      :can-cancel="true"
+      :is-full-page="false"
+    ></PageLoading>
 
     <div class="text-end mt-4 p-5">
-      <button class="btn btn-primary" type="button" @click="openModal(true)">
-        建立新的頁面
-      </button>
+      <button class="btn btn-primary" type="button" @click="openModal(true)">建立新的頁面</button>
     </div>
     <table class="table mt-4">
       <thead>

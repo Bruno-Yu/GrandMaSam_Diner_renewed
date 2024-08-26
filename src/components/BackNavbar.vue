@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="back_header"
-    class="container shadow p-2 mb-2 fixed-top bg-body rounded"
-  >
+  <div id="back_header" class="container shadow p-2 mb-2 fixed-top bg-body rounded">
     <nav class="navbar navbar-expand-lg navbar-light fix-top">
       <div class="container d-flex">
         <RouterLink
@@ -11,9 +8,7 @@
           @click="closeNavHam()"
         >
           GRANDMA SAM DINER
-          <p
-            class="text-dark fw-lighter text-center fs-6 lh-1 mb-0 font-Bangers"
-          >
+          <p class="text-dark fw-lighter text-center fs-6 lh-1 mb-0 font-Bangers">
             LET MAKE AMERICA GREAT AGAIN
           </p>
         </RouterLink>
@@ -26,48 +21,38 @@
         >
           <span class="navbar-toggler-icon" />
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarSupportedContent"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
             <li class="nav-item">
               <RouterLink class="nav-link fw-bold" to="/admin" @click="closeNavHam"
-
                 ><i class="bi bi-shop-window" /> 產品管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link  fw-bold" to="/couponsAdmin" @click="closeNavHam"
->
+              <RouterLink class="nav-link fw-bold" to="/couponsAdmin" @click="closeNavHam">
                 <i class="bi bi-flag" />
                 挑戰管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link  fw-bold" to="/ordersAdmin" @click="closeNavHam"
->
+              <RouterLink class="nav-link fw-bold" to="/ordersAdmin" @click="closeNavHam">
                 <i class="bi bi-clipboard-check" />
                 訂單管理</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link  fw-bold" to="/eventAdmin" @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/eventAdmin" @click="closeNavHam"
                 ><i class="bi bi-emoji-sunglasses" /> 公告編輯</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link  fw-bold" to="/aboutAdmin" @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/aboutAdmin" @click="closeNavHam"
                 ><i class="bi bi-journal-text" /> 關於作品</RouterLink
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link  fw-bold text-decoration-none"
-                @click.prevent="logout"
-                href="#"
-              >
-                <i class="bi bi-box-arrow-right" /> 人生登出</a
+              <a class="nav-link fw-bold text-decoration-none" @click.prevent="logout" href="#">
+                <i class="bi bi-box-arrow-right" /> 登出</a
               >
             </li>
           </ul>
@@ -99,7 +84,7 @@ export default {
         .post(api)
         .then((response) => {
           this.$httpMessageState(response, '登出');
-          this.$router.push('/trueusLogin');
+          this.$router.push('/login');
         })
         .catch((error) => {
           this.$httpMessageState(error.response, '錯誤訊息');

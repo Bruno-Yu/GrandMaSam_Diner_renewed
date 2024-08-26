@@ -24,36 +24,19 @@
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-6">
-              <img
-                class="img-fluid"
-                :src="product.imageUrl"
-                :alt="product.title"
-              />
+              <img class="img-fluid" :src="product.imageUrl" :alt="product.title" />
             </div>
             <div class="col-sm-6">
               <span class="badge bg-primary rounded-pill"> </span>
               <p>商品描述：{{ product.description }}</p>
               <p>商品內容：{{ product.content }}</p>
               <div class="h5">{{ product.unit }}</div>
-              <del class="h6 text-secondary small"
-                >原價 {{ product.origin_price }} 元</del
-              >
+              <del class="h6 text-secondary small">原價 {{ product.origin_price }} 元</del>
               <div class="h5">現在只要 {{ product.price }} 元</div>
               <div>
                 <div class="input-group">
-                  <input
-                    type="number"
-                    class="form-control"
-                    min="1"
-                    v-model="qty"
-                  />
-                  <button
-                    type="button"
-                    class="btn btn-dark"
-                    @click="addToCart"
-                  >
-                    加入購物車
-                  </button>
+                  <input type="number" class="form-control" min="1" v-model="qty" />
+                  <button type="button" class="btn btn-dark" @click="addToCart">加入購物車</button>
                 </div>
               </div>
             </div>
@@ -94,7 +77,7 @@ export default {
 
     getProduct() {
       this.$http(
-        `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/product/${this.id}`,
+        `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/product/${this.id}`
       ).then((res) => {
         this.product = res.data.product;
       });

@@ -6,19 +6,14 @@
           <h2 class="text-center text-light fs-1 my-5 font-Noto fw-900">404</h2>
         </div>
       </div>
-      <div
-        class="row d-flex justify-content-center justify-content-lg-end align-items-center"
-      >
+      <div class="row d-flex justify-content-center justify-content-lg-end align-items-center">
         <div class="col-8 bg-dark dialog-bg">
           <div class="d-flex justify-content-center my-2">
             <div class="text-center">
               <h3 class="text-light fw-bold text-light my-3 p-2 font-Noto">
-                喔喔~ 你找的這些頁面是不存在的
-                就像謠傳那些被撕碎丟到馬桶的機密一樣 是不存在的!
+                喔喔~ 你找的這些頁面是不存在的 就像謠傳那些被撕碎丟到馬桶的機密一樣 是不存在的!
               </h3>
-              <h4 class="text-dark fw-bolder font-Noto">
-                或許您也是想到商城?而不是白宮?
-              </h4>
+              <h4 class="text-dark fw-bolder font-Noto">或許您也是想到商城?而不是白宮?</h4>
             </div>
           </div>
           <div class="d-flex justify-content-center mt-1">

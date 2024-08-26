@@ -2,17 +2,17 @@
   <div class="container gx-0 bg-warning">
     <div class="row row-cols-1 row-cols-lg-3">
       <div class="col d-none d-lg-grid">
-        <div class="row  mb-1 p-2 bg-body">
+        <div class="row mb-1 p-2 bg-body">
           <div class="container Coupons-header-left ratio ratio-1x1" />
         </div>
       </div>
       <div class="col">
-        <div class="row  mb-1 p-2 bg-body">
+        <div class="row mb-1 p-2 bg-body">
           <div class="container Coupons-header-md ratio ratio-1x1" />
         </div>
       </div>
       <div class="col d-none d-lg-grid">
-        <div class="row  mb-1 p-2 bg-body">
+        <div class="row mb-1 p-2 bg-body">
           <div class="container Coupons-header-right ratio ratio-1x1" />
         </div>
       </div>
@@ -26,9 +26,7 @@
           <blockquote class="blockquote">
             <p class="fs-3 font-Noto fw-bold">
               <i>
-                成功其實是1分的實力<span class="d-inline-block d-sm-inline"
-                  >加上99分的心意</span
-                ></i
+                成功其實是1分的實力<span class="d-inline-block d-sm-inline">加上99分的心意</span></i
               >
             </p>
           </blockquote>
@@ -47,9 +45,7 @@
             <p class="fs-3 font-Noto fw-bold">
               <i
                 >錢包的厚度
-                <span class="d-inline-block d-sm-inline"
-                  >決定了您人生的高度!</span
-                >
+                <span class="d-inline-block d-sm-inline">決定了您人生的高度!</span>
               </i>
             </p>
             <p class="fs-3 font-Noto fw-bold">
@@ -68,36 +64,27 @@
     </div>
   </div>
   <div class="container gx-0 shadow mb-1 rounded">
-  <div
-    class="container gx-0 bg-body  text-center p-2 mb-2 "
-  >
-    <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">挑戰試煉</h2>
-    <p class="fs-5 lg-sm font-Noto fw-500 text-warning">
-      <i> 人生就是不停地挑戰自己的極限! 我們能提供的不只有5倍! </i>
-    </p>
-    <p class="fs-6 lh-sm text-muted">
-      ( 註: 此券能對於您的結帳金額有所加成，是被視為成功人士的象徵，但請量力而為
-      )
-    </p>
-  </div>
-    <div id="coupon-section" >
+    <div class="container gx-0 bg-body text-center p-2 mb-2">
+      <h2 class="fs-2 font-Noto fw-600 mt-2 mb-3">挑戰試煉</h2>
+      <p class="fs-5 lg-sm font-Noto fw-500 text-warning">
+        <i> 人生就是不停地挑戰自己的極限! 我們能提供的不只有5倍! </i>
+      </p>
+      <p class="fs-6 lh-sm text-muted">
+        ( 註: 此券能對於您的結帳金額有所加成，是被視為成功人士的象徵，但請量力而為 )
+      </p>
+    </div>
+    <div id="coupon-section">
       <div class="container mt-2 mt-lg-0 gx-0">
         <div class="row row-cols-1 row-cols-lg-4 justify-content-start">
           <div class="col">
             <div class="card m-4 shadow">
               <div class="card-body">
-                <h4
-                  class="card-title text-center text-warning font-Noto fw-bold"
-                >
-                  5倍券
-                </h4>
+                <h4 class="card-title text-center text-warning font-Noto fw-bold">5倍券</h4>
                 <hr />
                 <p class="card-text font-Noto fw-500">適用場景：斗內作者</p>
                 <p class="card-text font-Noto fw-500">適用商品：架上商品</p>
                 <h5 class="coupon-num-open text-center p-2">#55555555</h5>
-                <p class="card-text text-muted">
-                  活動日期：2022/04/20 - 2022/5/28
-                </p>
+                <p class="card-text text-muted">活動日期：2022/04/20 - 2022/5/28</p>
                 <div class="d-flex justify-content-center">
                   <button
                     type="button"
@@ -114,18 +101,12 @@
           <div class="col">
             <div class="card m-4 shadow">
               <div class="card-body">
-                <h4
-                  class="card-title text-center text-warning font-Noto fw-bold"
-                >
-                  4倍券
-                </h4>
+                <h4 class="card-title text-center text-warning font-Noto fw-bold">4倍券</h4>
                 <hr />
                 <p class="card-text font-Noto fw-500">適用場景：斗內作者</p>
                 <p class="card-text font-Noto fw-500">適用商品：架上商品</p>
                 <h5 class="coupon-num-open text-center p-2">#44444444</h5>
-                <p class="card-text text-muted">
-                  活動日期：2022/04/20 - 2022/5/28
-                </p>
+                <p class="card-text text-muted">活動日期：2022/04/20 - 2022/5/28</p>
                 <div class="d-flex justify-content-center">
                   <button
                     type="button"
@@ -142,18 +123,12 @@
           <div class="col">
             <div class="card m-4 shadow">
               <div class="card-body">
-                <h4
-                  class="card-title text-center text-warning font-Noto fw-bold"
-                >
-                  8倍券
-                </h4>
+                <h4 class="card-title text-center text-warning font-Noto fw-bold">8倍券</h4>
                 <hr />
                 <p class="card-text font-Noto fw-500">適用場景：斗內作者</p>
                 <p class="card-text font-Noto fw-500">適用商品：架上商品</p>
                 <h5 class="coupon-num-open text-center p-2">#88888888</h5>
-                <p class="card-text text-muted">
-                  活動日期：2022/04/20 - 2022/5/28
-                </p>
+                <p class="card-text text-muted">活動日期：2022/04/20 - 2022/5/28</p>
                 <div class="d-flex justify-content-center">
                   <button
                     type="button"
@@ -170,16 +145,12 @@
           <div class="col">
             <div class="card m-4 shadow">
               <div class="card-body">
-                <h4 class="card-title text-center text-warning fw-bold">
-                  7倍券
-                </h4>
+                <h4 class="card-title text-center text-warning fw-bold">7倍券</h4>
                 <hr />
                 <p class="card-text font-Noto fw-500">適用場景：斗內作者</p>
                 <p class="card-text font-Noto fw-500">適用商品：架上商品</p>
                 <h5 class="coupon-num-open text-center p-2">#77777777</h5>
-                <p class="card-text text-muted">
-                  活動日期：2022/04/20 - 2022/5/28
-                </p>
+                <p class="card-text text-muted">活動日期：2022/04/20 - 2022/5/28</p>
                 <div class="d-flex justify-content-center">
                   <button
                     type="button"
@@ -198,19 +169,12 @@
     </div>
   </div>
   <div class="container gx-0 Thanks-boss">
-    <div
-      class="row d-flex text-center align-items-center w-100 h-100 position-relative"
-    >
+    <div class="row d-flex text-center align-items-center w-100 h-100 position-relative">
       <div class="col-12 my-lg-3">
         <h2 class="fs-1 font-Noto fw-600 text-warning">謝謝老闆</h2>
         <h5 class="font-Noto fw-600 text-warning">好人一生平安</h5>
-        <div
-          class="w-100 mt-lg-5 mt-3 pt-5 position-absolute"
-          style="z-index: 99"
-        >
-          <div
-            class="container w-100 p-2 rounded-2 Coupons-title bg-black Thanks-boss-height"
-          >
+        <div class="w-100 mt-lg-5 mt-3 pt-5 position-absolute" style="z-index: 99">
+          <div class="container w-100 p-2 rounded-2 Coupons-title bg-black Thanks-boss-height">
             <h2 class="fs-2 mt-1 font-Noto fw-bold text-light text-center">
               訂閱我們最新的要款通知
             </h2>
@@ -242,10 +206,7 @@
                         ></div>
                       </button>
 
-                      <ErrorMessage
-                        name="email"
-                        class="invalid-feedback fs-5"
-                      ></ErrorMessage>
+                      <ErrorMessage name="email" class="invalid-feedback fs-5"></ErrorMessage>
                     </div>
                   </VForm>
                 </div>

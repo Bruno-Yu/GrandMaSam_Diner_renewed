@@ -105,9 +105,9 @@ const routes = [
     ],
   },
   {
-    path: '/trueusLogin',
-    name: 'trueusLogin',
-    component: () => import('../views/TrueusLogin.vue'),
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/LoginView.vue'),
   },
   {
     path: '/404',
@@ -130,7 +130,7 @@ const router = createRouter({
         top: 3400,
       };
     }
-    if (to.fullPath.match('about') && from.fullPath.match('trueusLogin')) {
+    if (to.fullPath.match('about') && from.fullPath.match('login')) {
       return {
         top: 3400,
       };

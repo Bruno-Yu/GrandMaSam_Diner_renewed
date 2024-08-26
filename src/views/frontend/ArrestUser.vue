@@ -11,24 +11,14 @@
     >
       <div class="col col-10 col-lg-6 vh-30 my-3">
         <div class="container">
-          <p
-            class="text-dark fs-1 ps-lg-3 d-none d-lg-inline-block text-nowrap font-Noto fw-800"
-          >
+          <p class="text-dark fs-1 ps-lg-3 d-none d-lg-inline-block text-nowrap font-Noto fw-800">
             <i>警告! 你已被匿名舉發!!!</i>
           </p>
-          <div
-            class="bg-dark border border-light border-1 rounded-3 dialog-arrest-bg"
-          >
-            <p
-              class="text-light fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500"
-            >
+          <div class="bg-dark border border-light border-1 rounded-3 dialog-arrest-bg">
+            <p class="text-light fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500">
               內~ 警察叔叔
             </p>
-            <p
-              class="text-light fs-2 fw-bold text-center pt-2 font-Noto fw-400"
-            >
-              就是這個人!!!
-            </p>
+            <p class="text-light fs-2 fw-bold text-center pt-2 font-Noto fw-400">就是這個人!!!</p>
 
             <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
               <button

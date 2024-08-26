@@ -27,16 +27,10 @@
           <strong class="text-danger"></strong> 商品(刪除後將無法恢復)。
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            data-bs-dismiss="modal"
-          >
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
             取消
           </button>
-          <button type="button" class="btn btn-danger" @click="updateData">
-            確認刪除
-          </button>
+          <button type="button" class="btn btn-danger" @click="updateData">確認刪除</button>
         </div>
       </div>
     </div>
@@ -81,16 +75,8 @@
                     id="imageUrl"
                   />
                 </div>
-                <img
-                  class="img-fluid"
-                  :src="productDisplay.imageUrl"
-                  :alt="productDisplay.title"
-                />
-                <div
-                  class="mb-1"
-                  v-for="(image, key) in productDisplay.imagesUrl"
-                  :key="key"
-                >
+                <img class="img-fluid" :src="productDisplay.imageUrl" :alt="productDisplay.title" />
+                <div class="mb-1" v-for="(image, key) in productDisplay.imagesUrl" :key="key">
                   <div class="form-group">
                     <label for="imagesUrl" class="form-label">圖片網址</label>
                     <input
@@ -106,9 +92,7 @@
                 <div
                   v-if="
                     !productDisplay.imagesUrl.length ||
-                    productDisplay.imagesUrl[
-                      productDisplay.imagesUrl.length - 1
-                    ]
+                    productDisplay.imagesUrl[productDisplay.imagesUrl.length - 1]
                   "
                 >
                   <button
@@ -223,28 +207,16 @@
                     :false-value="0"
                     v-model="productDisplay.is_enabled"
                   />
-                  <label class="form-check-label" for="is_enabled"
-                    >是否啟用</label
-                  >
+                  <label class="form-check-label" for="is_enabled">是否啟用</label>
                 </div>
               </div>
             </div>
           </div>
           <div class="modal-footer bg-dark text-white">
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
               取消
             </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              v-on:click="updateData"
-            >
-              確認
-            </button>
+            <button type="button" class="btn btn-primary" v-on:click="updateData">確認</button>
           </div>
         </div>
       </div>
@@ -285,12 +257,9 @@ export default {
     updateData() {
       if (this.newOn) {
         this.$http
-          .post(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/product`,
-            {
-              data: this.productDisplay,
-            },
-          )
+          .post(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/product`, {
+            data: this.productDisplay,
+          })
           .then((response) => {
             this.$httpMessageState(response, '更新資料成功');
             this.bsNewproduct.hide();
@@ -303,7 +272,7 @@ export default {
       } else if (this.deleteOn) {
         this.$http
           .delete(
-            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/product/${this.productDisplay.id}`,
+            `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/product/${this.productDisplay.id}`
           )
           .then((response) => {
             this.$httpMessageState(response, '成功刪除');
@@ -319,7 +288,7 @@ export default {
         this.$http
           .put(
             `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/product/${this.productDisplay.id}`,
-            { data: this.productDisplay },
+            { data: this.productDisplay }
           )
           .then((response) => {
             this.$httpMessageState(response, '成功獲得資料');
@@ -335,9 +304,7 @@ export default {
   },
   mounted() {
     this.bsNewproduct = new Modal(document.querySelector('#productModal'));
-    this.bsDeleteproduct = new Modal(
-      document.querySelector('#delProductModal'),
-    );
+    this.bsDeleteproduct = new Modal(document.querySelector('#delProductModal'));
   },
 };
 </script>

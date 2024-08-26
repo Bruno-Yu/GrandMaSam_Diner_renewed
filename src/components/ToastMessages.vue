@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="toast-container position-fixed pe-3 top-0 end-0"
-    style="z-index: 1500"
-  >
+  <div class="toast-container position-fixed pe-3 top-0 end-0" style="z-index: 1500">
     <div
       v-for="(msg, key) in messages"
       :key="key"
@@ -11,10 +8,7 @@
       role="alert"
     >
       <div class="toast-header">
-        <span
-          :class="`bg-${msg.style}`"
-          class="p-2 rounded me-2 d-inline-block"
-        ></span>
+        <span :class="`bg-${msg.style}`" class="p-2 rounded me-2 d-inline-block"></span>
         <strong class="me-auto">{{ msg.title }}</strong>
         <button
           type="button"

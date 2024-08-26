@@ -17,7 +17,7 @@
               :space-between="50"
               navigation
               :pagination="{ clickable: true }"
-              class=" mb-3 ps-0  rounded"
+              class="mb-3 ps-0 rounded"
             >
               <SwiperSlide>
                 <div
@@ -25,10 +25,7 @@
                   :style="{ backgroundImage: `url(${product.imageUrl})` }"
                 ></div>
               </SwiperSlide>
-              <SwiperSlide
-                v-for="(image, key) in product.imagesUrl"
-                :key="key"
-                class=" rounded"
+              <SwiperSlide v-for="(image, key) in product.imagesUrl" :key="key" class="rounded"
                 ><div
                   class="carousel-item d-block ratio ratio-4x3 product-display"
                   :style="{ backgroundImage: `url(${image})` }"
@@ -38,20 +35,14 @@
           </div>
           <div class="col-md-5">
             <nav aria-label="breadcrumb" class="mt-5">
-              <ol
-                class="breadcrumb bg-white px-0 pt-3 pb-2 font-Noto fw-400 mb-0"
-              >
+              <ol class="breadcrumb bg-white px-0 pt-3 pb-2 font-Noto fw-400 mb-0">
                 <li class="breadcrumb-item">
                   <RouterLink class="text-muted" to="/">首頁</RouterLink>
                 </li>
                 <li class="breadcrumb-item">
-                  <RouterLink class="text-muted" to="/productsView"
-                    >商店</RouterLink
-                  >
+                  <RouterLink class="text-muted" to="/productsView">商店</RouterLink>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  產品細節
-                </li>
+                <li class="breadcrumb-item active" aria-current="page">產品細節</li>
               </ol>
             </nav>
             <h2 class="h1 font-Noto fw-600 ps-2 mt-3 mb-1">
@@ -63,9 +54,7 @@
             <p class="h4 fw-bold text-end">NT${{ product.price }}</p>
             <div class="row mb-3 align-items-center">
               <div class="col-6">
-                <div
-                  class="input-group my-3 bg-light rounded border border-body border-1"
-                >
+                <div class="input-group my-3 bg-light rounded border border-body border-1">
                   <div class="input-group-prepend">
                     <button
                       class="btn btn-outline-dark border-0 py-2"
@@ -110,9 +99,7 @@
                 </button>
               </div>
             </div>
-            <div
-              class="row row-cols-1 row-cols-lg-2 my-5 justify-content-center rounded g-3"
-            >
+            <div class="row row-cols-1 row-cols-lg-2 my-5 justify-content-center rounded g-3">
               <div class="col col-lg-5">
                 <h3 class="text-muted font-Noto fw-600">商品規格</h3>
                 <p class="text-muted font-Noto fw-400">
@@ -207,13 +194,7 @@
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import cartMessage from '@/components/cartMessage.vue';
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  EffectCoverflow,
-  FreeMode,
-} from 'swiper';
+import { Navigation, Pagination, Autoplay, EffectCoverflow, FreeMode } from 'swiper';
 
 export default {
   data() {

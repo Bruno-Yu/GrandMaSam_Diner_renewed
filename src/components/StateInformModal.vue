@@ -8,17 +8,10 @@
     aria-labelledby="exampleModalLabel"
     aria-hidden="true"
   >
-    <div
-      v-for="(msg, key) in messages"
-      :key="key"
-      :class="`modal-dialog${key}`"
-    >
+    <div v-for="(msg, key) in messages" :key="key" :class="`modal-dialog${key}`">
       <div v-if="success" class="modal-content">
         <div class="modal-header" :class="`bg-${msg.style}`">
-          <h3
-            class="modal-title text-light font-Noto fw-700"
-            id="exampleModalLabel "
-          >
+          <h3 class="modal-title text-light font-Noto fw-700" id="exampleModalLabel ">
             {{ msg.title }}
           </h3>
           <button

@@ -6,17 +6,13 @@
     :is-full-page="false"
   ></PageLoading>
   <div class="container gx-0 bg-warning vh-90 my-1 mt-4">
-    <div
-      class="row row-cols-1 row-cols-lg-2 d-flex align-items-center justify-content-center"
-    >
+    <div class="row row-cols-1 row-cols-lg-2 d-flex align-items-center justify-content-center">
       <div class="col col-lg-5">
         <div class="my-2 ratio ratio-1x1">
           <div class="aidsHelp" />
         </div>
       </div>
-      <div
-        class="col col-lg-5 me-lg-5 header-content  p-4 mb-5 mt-2 bg-warning rounded"
-      >
+      <div class="col col-lg-5 me-lg-5 header-content p-4 mb-5 mt-2 bg-warning rounded">
         <h3 class="my-3 text-light font-Noto fw-600">很遺憾地聽到這消息</h3>
         <p class="fw-bold">
           但莫擔心莫害怕，我們政府衛生福利部疾病管理署早就立定了維護罹患愛滋朋友的相關權益，若有您有遭受以下行為皆能申訴，以下是節錄部分:
@@ -62,9 +58,7 @@
         </ul>
         <p class="fs-5 fw-bold">
           看到這麼用心的台灣主管機關所編撰的內容，是否有讓您回心轉意，要回到商店怒買一波以表達您的愛國心呢?
-          <RouterLink to="/productsView" class="link-danger fw-bold"
-            >回商店連結</RouterLink
-          >
+          <RouterLink to="/productsView" class="link-danger fw-bold">回商店連結</RouterLink>
         </p>
       </div>
     </div>

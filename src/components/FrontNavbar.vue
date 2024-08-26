@@ -8,9 +8,7 @@
           @click="closeNavHam"
         >
           GRANDMA SAM DINER
-          <p
-            class="text-dark fw-lighter text-center fs-6 lh-1 mb-0 font-Bangers"
-          >
+          <p class="text-dark fw-lighter text-center fs-6 lh-1 mb-0 font-Bangers">
             LET MAKE AMERICA GREAT AGAIN
           </p>
         </RouterLink>
@@ -27,37 +25,24 @@
         >
           <span class="navbar-toggler-icon" />
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarSupportedContent"
-        >
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul class="navbar-nav align-items-center mb-2 ms-auto mb-lg-0">
             <!-- aria-current="page" -->
             <li class="nav-item">
-              <RouterLink
-                class="nav-link fw-bold"
-                to="/about"
-                @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/about" @click="closeNavHam"
                 ><i class="bi bi-journals" /> 故事</RouterLink
               >
             </li>
 
             <li class="nav-item">
               <!-- aria-current="page" -->
-              <RouterLink
-                class="nav-link  fw-bold"
-                to="/productsView"
-                @click="closeNavHam"
-              >
+              <RouterLink class="nav-link fw-bold" to="/productsView" @click="closeNavHam">
                 <i class="bi bi-shop" />
                 商店</RouterLink
               >
             </li>
             <li class="nav-item">
-              <RouterLink
-                class="nav-link  fw-bold"
-                to="/userChallenges"
-                @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/userChallenges" @click="closeNavHam"
                 ><i class="bi bi-flag" />
 
                 挑戰</RouterLink
@@ -66,10 +51,7 @@
 
             <!-- aria-current="page" -->
             <li class="nav-item">
-              <RouterLink
-                class="nav-link fw-bold"
-                to="/localStorage"
-                @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/localStorage" @click="closeNavHam"
                 ><i class="bi bi-suit-heart" />
 
                 收藏</RouterLink
@@ -78,19 +60,13 @@
 
             <!-- aria-current="page" -->
             <li class="nav-item">
-              <RouterLink
-                class="nav-link fw-bold"
-                to="/cartView"
-                @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/cartView" @click="closeNavHam"
                 ><i class="bi bi-bag" /> 訂單</RouterLink
               >
             </li>
             <!-- aria-current="page" -->
             <li class="nav-item">
-              <RouterLink
-                class="nav-link  fw-bold"
-                to="/userArticles"
-                @click="closeNavHam"
+              <RouterLink class="nav-link fw-bold" to="/userArticles" @click="closeNavHam"
                 ><i class="bi bi-megaphone" />
 
                 公告</RouterLink
@@ -98,11 +74,7 @@
             </li>
 
             <li class="nav-item">
-              <RouterLink
-                class="nav-link fw-bold"
-                to="/trueusLogin"
-                @click="closeNavHam"
-              >
+              <RouterLink class="nav-link fw-bold" to="/login" @click="closeNavHam">
                 <i class="bi bi-person" /> 登入</RouterLink
               >
             </li>

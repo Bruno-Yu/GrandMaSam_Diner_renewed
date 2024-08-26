@@ -70,9 +70,7 @@
                   <tr>
                     <th>付款狀態</th>
                     <td>
-                      <strong v-if="orderShow.is_paid" class="text-success"
-                        >已付款</strong
-                      >
+                      <strong v-if="orderShow.is_paid" class="text-success">已付款</strong>
                       <span v-else class="text-muted">尚未付款</span>
                     </td>
                   </tr>
@@ -120,16 +118,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-outline-secondary"
-            data-bs-dismiss="modal"
-          >
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
             取消
           </button>
-          <button type="button" class="btn btn-primary" @click="updateOrder">
-            修改付款狀態
-          </button>
+          <button type="button" class="btn btn-primary" @click="updateOrder">修改付款狀態</button>
         </div>
       </div>
     </div>

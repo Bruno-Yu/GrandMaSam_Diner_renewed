@@ -11,7 +11,7 @@
       <div class="row row-cols-3">
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
             type="button"
             disabled
           >
@@ -20,7 +20,7 @@
         </div>
         <div class="col">
           <button
-            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
+            class="btn w-100 btn-warning rounded-2 border border-dark border-3"
             type="button"
             disabled
           >
@@ -28,26 +28,19 @@
           </button>
         </div>
         <div class="col">
-          <button
-            class="btn w-100 btn-warning rounded-2  border border-dark border-3"
-            type="button"
-          >
+          <button class="btn w-100 btn-warning rounded-2 border border-dark border-3" type="button">
             <p class="fs-4 font-Noto fw-600 my-2">訂單內容</p>
           </button>
         </div>
       </div>
     </div>
-    <h2
-      class="font-Noto mt-2 mt-lg-5 fw-700 text-center text-md-start ps-md-5 text-warning"
-    >
+    <h2 class="font-Noto mt-2 mt-lg-5 fw-700 text-center text-md-start ps-md-5 text-warning">
       步驟 3. 訂單內容
     </h2>
     <div
       class="container shadow-sm my-5 bg-body border border-1 border-body align-middle rounded-3 px-lg-5"
     >
-      <div
-        class="row row-cols-1 row-cols-lg-2 mt-5 mb-3 justify-content-center"
-      >
+      <div class="row row-cols-1 row-cols-lg-2 mt-5 mb-3 justify-content-center">
         <div class="col-lg-6 p-4 bg-body border border-1 border-body">
           <h3 class="fw-bold font-Noto mb-3">施主資訊</h3>
           <table class="table">
@@ -93,14 +86,10 @@
               <tr>
                 <th class="font-Noto fw-400">付款狀態</th>
                 <td>
-                  <strong
-                    v-if="orderShow.is_paid"
-                    class="text-success font-Noto fw-600"
+                  <strong v-if="orderShow.is_paid" class="text-success font-Noto fw-600"
                     >已付款</strong
                   >
-                  <span v-else class="text-muted font-Noto fw-600"
-                    >尚未付款</span
-                  >
+                  <span v-else class="text-muted font-Noto fw-600">尚未付款</span>
                 </td>
               </tr>
               <tr>
@@ -114,9 +103,7 @@
         </div>
       </div>
       <hr />
-      <div
-        class="row my-2 justify-content-center p-4 bg-body border border-1 border-body"
-      >
+      <div class="row my-2 justify-content-center p-4 bg-body border border-1 border-body">
         <h3 class="fw-bold font-Noto">選購商品</h3>
         <table class="table col-6 mt-3 fw-bold font-Noto">
           <thead>
@@ -129,9 +116,7 @@
               </th>
               <td>
                 {{ item.qty }}
-                <span class="d-none d-lg-inline"
-                  >/ {{ item.product.unit }}</span
-                >
+                <span class="d-none d-lg-inline">/ {{ item.product.unit }}</span>
               </td>
               <td class="text-end">
                 {{ item.final_total }}

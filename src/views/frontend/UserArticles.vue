@@ -5,26 +5,18 @@
     :can-cancel="true"
     :is-full-page="false"
   ></PageLoading>
-  <div
-    class="container gx-0 bg-black  rounded border border-body border-3"
-  >
+  <div class="container gx-0 bg-black rounded border border-body border-3">
     <div class="row row-cols-1 row-cols-lg-2">
       <div class="col ge-0">
         <div class="container News-banner" />
       </div>
       <div class="col gs-0">
-        <div
-          class="container d-flex align-items-center h-100 p-3  bg-black"
-        >
-          <div
-            class="container mb-2 p-4 rounded h-50 d-flex align-items-center bg-black"
-          >
+        <div class="container d-flex align-items-center h-100 p-3 bg-black">
+          <div class="container mb-2 p-4 rounded h-50 d-flex align-items-center bg-black">
             <figure class="text-center text-lg-start">
               <blockquote class="blockquote">
                 <p class="fs-1 text-light font-Noto fw-bold">
-                  <i>
-                    我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過!</i
-                  >
+                  <i> 我們堅信合意信教的正確性，而一想到那些無辜受驚的民眾，我還是會感到難過!</i>
                 </p>
               </blockquote>
               <figcaption class="blockquote-footer font-Noto fs-5 text-lg-end">
@@ -36,29 +28,17 @@
       </div>
     </div>
   </div>
-  <div
-    class="container gx-0 mt-2 mb-3 mb-lg-4 News-title rounded border border-body border-5"
-  >
+  <div class="container gx-0 mt-2 mb-3 mb-lg-4 News-title rounded border border-body border-5">
     <div class="row">
-      <h2 class="fs-1 my-3 font-Noto fw-600 text-light text-center">
-        稗史與公告
-      </h2>
+      <h2 class="fs-1 my-3 font-Noto fw-600 text-light text-center">稗史與公告</h2>
     </div>
   </div>
-  <div
-    class="container gx-0 bg-body shadow-sm rounded"
-  >
+  <div class="container gx-0 bg-body shadow-sm rounded">
     <div class="row row-cols-1 row-cols-lg-3 g-4">
       <template v-for="article in articles" :key="article.id">
         <div class="col" v-if="article.isPublic">
-          <RouterLink
-            :to="`/userArticle/${article.id}`"
-            v-if="article.isPublic"
-            class="btn"
-          >
-            <div
-              class="card shadow  mb-1 p-1"
-            >
+          <RouterLink :to="`/userArticle/${article.id}`" v-if="article.isPublic" class="btn">
+            <div class="card shadow mb-1 p-1">
               <!-- 主圖替換 -->
               <img
                 v-if="article.id == '-N-tl8D5WkaIJ1frNRRB'"
@@ -148,16 +128,10 @@
                     :disabled="isLoading"
                   >
                     訂閱
-                    <div
-                      v-if="isLoading"
-                      class="spinner-border spinner-border-sm text-light"
-                    ></div>
+                    <div v-if="isLoading" class="spinner-border spinner-border-sm text-light"></div>
                   </button>
 
-                  <ErrorMessage
-                    name="email"
-                    class="invalid-feedback fs-5"
-                  ></ErrorMessage>
+                  <ErrorMessage name="email" class="invalid-feedback fs-5"></ErrorMessage>
                 </div>
               </VForm>
             </div>

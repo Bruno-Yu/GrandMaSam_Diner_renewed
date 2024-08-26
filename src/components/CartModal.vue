@@ -80,20 +80,14 @@
                   </td>
                 </tr>
                 <tr v-if="cart.total !== cart.final_total">
-                  <td
-                    colspan="4"
-                    class="text-right text-dark h5 border-top-0 fw-bold"
-                  >
+                  <td colspan="4" class="text-right text-dark h5 border-top-0 fw-bold">
                     折扣價&nbsp;&nbsp;&nbsp;${{ cart.final_total }}
                   </td>
                 </tr>
               </tbody>
             </table>
           </section>
-          <section
-            class="container my-3 text-center"
-            v-if="cart.carts.length === 0"
-          >
+          <section class="container my-3 text-center" v-if="cart.carts.length === 0">
             <p class="h3 text-secondary">目前無選購商品，歡迎立即選購</p>
           </section>
         </div>
@@ -140,9 +134,7 @@ export default {
     removeCart(id) {
       this.isLoadingItem = id;
       this.$http
-        .delete(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`,
-        )
+        .delete(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${id}`)
 
         .then(() => {
           emitter.emit('get-cart');

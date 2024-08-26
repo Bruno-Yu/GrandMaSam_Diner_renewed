@@ -11,12 +11,7 @@
     <div class="modal-dialog">
       <div v-if="success" class="modal-content">
         <div class="modal-header bg-warning">
-          <h3
-            class="modal-title text-light font-Noto fw-700"
-            id="exampleModalLabel "
-          >
-            執行成功
-          </h3>
+          <h3 class="modal-title text-light font-Noto fw-700" id="exampleModalLabel ">執行成功</h3>
           <button
             type="button"
             class="btn-close"
@@ -47,7 +42,7 @@
           <div class="container gx-2">
             <button
               type="button"
-              class="btn btn-warning  mx-auto  p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-warning mx-auto p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="paidSuccess(), closeModal()"
             >
               我是盤子我驕傲
@@ -58,7 +53,7 @@
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal(), loginSuccess()"
             >
@@ -76,10 +71,7 @@
       </div>
       <div v-else class="modal-content">
         <div class="modal-header bg-danger">
-          <h3
-            class="modal-title text-light font-Noto fw-700"
-            id="exampleModalLabel"
-          >
+          <h3 class="modal-title text-light font-Noto fw-700" id="exampleModalLabel">
             執行結果失敗
           </h3>
           <button
@@ -98,35 +90,27 @@
               <li class="font-Noto fw-400">
                 1. 或許您可以透過替親人保高額保險並技巧性的向保險公司申請理賠
               </li>
-              <li class="font-Noto fw-400">
-                2. 或者與友人合作並通知您家人您在我們的手上
-              </li>
+              <li class="font-Noto fw-400">2. 或者與友人合作並通知您家人您在我們的手上</li>
             </ul>
-            <p class="font-Noto fw-400">
-              請放心，我們致力於保護客戶的隱私，我們並不會追查款項來源
-            </p>
+            <p class="font-Noto fw-400">請放心，我們致力於保護客戶的隱私，我們並不會追查款項來源</p>
           </div>
         </div>
         <div class="modal-body" v-if="login">
           <div class="container pt-2 gx-2">
-            <h5
-              style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550"
-            >
+            <h5 style="font-family: 'Noto Sans JP', sans-serif; font-weight: 550">
               很遺憾地通知您，登入失敗
             </h5>
             <p class="font-Noto fw-400">
               這很明顯的，是您的誠意不夠，難道您不曉得斗內給作者越多的人，越有機會登入嗎?
             </p>
-            <p class="font-Noto fw-400">
-              隨隨便便讓你登入，這讓很有誠意的會員情何以堪?
-            </p>
+            <p class="font-Noto fw-400">隨隨便便讓你登入，這讓很有誠意的會員情何以堪?</p>
           </div>
         </div>
         <div v-if="paid" class="modal-footer">
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="closeModal"
             >
@@ -134,7 +118,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-danger ms-2  p-2 mb-1 border border-dark border-1 font-Noto fw-400"
+              class="btn btn-danger ms-2 p-2 mb-1 border border-dark border-1 font-Noto fw-400"
               @click="closeModal"
             >
               我知道了
@@ -145,7 +129,7 @@
           <div class="container d-flex justify-content-end gx-2">
             <button
               type="button"
-              class="btn btn-outline-dark  p-2 mb-1 font-Noto fw-400"
+              class="btn btn-outline-dark p-2 mb-1 font-Noto fw-400"
               data-bs-dismiss="modal"
               @click="loginFail(), closeModal()"
             >
@@ -204,7 +188,7 @@ export default {
       this.$router.push('/admin');
     },
     loginFail() {
-      this.$router.push('/trueusLogin');
+      this.$router.push('/login');
     },
     donateNow() {
       this.$router.push('/about');

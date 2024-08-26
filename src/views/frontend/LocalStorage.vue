@@ -20,31 +20,23 @@
           @click="removeFavAll"
           :disabled="isLoadingItem === 'deleteAll' || favorites.length === 0"
         >
-          <span
-            class="spinner-grow spinner-grow-sm"
-            v-show="isLoadingItem === 'deleteAll'"
-          ></span
+          <span class="spinner-grow spinner-grow-sm" v-show="isLoadingItem === 'deleteAll'"></span
           >清空收藏
         </button>
       </div>
     </div>
-    <div
-      class="container shadow my-4 bg-body border border-1 border-body p-5 rounded"
-    >
+    <div class="container shadow my-4 bg-body border border-1 border-body p-5 rounded">
       <div class="row">
         <table class="table">
           <thead>
-            <tr
-              class="text-start text-start font-Noto fw-bold fs-5 text-primary"
-            >
+            <tr class="text-start text-start font-Noto fw-bold fs-5 text-primary">
               <th>刪<span class="d-none d-lg-inline">除鍵</span></th>
               <th class="d-none d-lg-table-cell">預覽圖</th>
               <th>品名</th>
               <th>單價</th>
               <th class="d-none d-lg-table-cell">產品細節</th>
               <th class="text-nowrap">
-                加<span class="d-none d-lg-inline">入</span>購<span
-                  class="d-none d-lg-inline"
+                加<span class="d-none d-lg-inline">入</span>購<span class="d-none d-lg-inline"
                   >物車</span
                 >
               </th>
@@ -82,18 +74,14 @@
                 ></span>
                 <span class="text-secondary fz-sm"
                   >{{ item.price }}
-                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400"
-                    >元</span
-                  >
-                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400">
-                    / {{ item.unit }}</span
-                  >
+                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400">元</span>
+                  <span class="d-none d-lg-inline font-Noto fs-5 fw-400"> / {{ item.unit }}</span>
                 </span>
               </td>
               <td class="d-none d-lg-table-cell">
                 <button
                   type="button"
-                  class="btn btn-outline-secondary btn-sm  mt-2 font-Noto fw-400"
+                  class="btn btn-outline-secondary btn-sm mt-2 font-Noto fw-400"
                   :disabled="isLoadingItem === item.id"
                   @click="goToProductView(item.id)"
                 >
@@ -117,7 +105,7 @@
                   ></span>
                   <i class="d-lg-none bi bi-cart2 text-danger"></i
                   ><span
-                    class="d-none d-lg-inline-block btn btn-danger font-Noto fs-6 fw-400 btn-sm "
+                    class="d-none d-lg-inline-block btn btn-danger font-Noto fs-6 fw-400 btn-sm"
                   >
                     加到購物車</span
                   >
@@ -128,15 +116,12 @@
         </table>
         <div class="text-end my-3">
           <button
-            class="btn btn-danger font-Noto fw-bold border border-1 border-body "
+            class="btn btn-danger font-Noto fw-bold border border-1 border-body"
             type="button"
             @click="addAllToCart"
             :disabled="isLoadingItem === 'addAll' || favorites.length === 0"
           >
-            <span
-              class="spinner-grow spinner-grow-sm"
-              v-show="isLoadingItem === 'addAll'"
-            ></span>
+            <span class="spinner-grow spinner-grow-sm" v-show="isLoadingItem === 'addAll'"></span>
             全加到購物車
           </button>
         </div>
@@ -147,28 +132,24 @@
     <div class="row d-flex align-items-center justify-content-center vh-100">
       <div class="col vh-30 my-3">
         <div class="container bg-light font-Noto dialog-local-bg py-2">
-          <p
-            class="text-dark fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500"
-          >
+          <p class="text-dark fs-2 fw-bold text-center mt-4 mt-sm-2 font-Noto fw-500">
             怎麼? 你以為這是一般的購物網站嗎?
           </p>
           <p class="text-dark fs-4 fw-bold text-center pt-2 font-Noto fw-400">
             你有想過
-            <span class="d-inline-block d-sm-inline">非洲的小孩</span
-            >每過60秒就<span class="text-danger d-inline-block d-sm-inline"
+            <span class="d-inline-block d-sm-inline">非洲的小孩</span>每過60秒就<span
+              class="text-danger d-inline-block d-sm-inline"
               >少了1分鐘的壽命</span
             >嗎?
           </p>
-          <p class="text-dark fs-4 fw-bold text-center font-Noto fw-400">
-            而這
-          </p>
+          <p class="text-dark fs-4 fw-bold text-center font-Noto fw-400">而這</p>
           <p class="text-dark fs-4 fw-bold text-center font-Noto fw-400">
             並不是收不收藏商品的問題，而是愛不愛國的問題!!!
           </p>
           <div class="d-flex justify-content-center mt-2 mb-2 mt-lg-4">
             <button
               type="button"
-              class="btn btn-outline-dark fs-3  p-2 mb-1 border border-dark border-2 w-30 font-Noto fw-600"
+              class="btn btn-outline-dark fs-3 p-2 mb-1 border border-dark border-2 w-30 font-Noto fw-600"
               @click="goToAIDS"
             >
               我愛滋
@@ -219,9 +200,7 @@ export default {
     getProducts() {
       this.isLoading = true;
       this.$http
-        .get(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`,
-        )
+        .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/products`)
         .then((res) => {
           this.products = res.data.products;
           this.getFavor(this.products);
@@ -261,10 +240,7 @@ export default {
       };
       this.isLoadingItem = id;
       this.$http
-        .post(
-          `${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`,
-          { data },
-        )
+        .post(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart`, { data })
         .then(() => {
           this.getCart();
           this.isLoadingItem = '';
@@ -296,10 +272,7 @@ export default {
   watch: {
     favorites: {
       handler() {
-        window.localStorage.setItem(
-          'favorites',
-          JSON.stringify(this.favorites),
-        );
+        window.localStorage.setItem('favorites', JSON.stringify(this.favorites));
         this.getProducts();
       },
       deep: true,

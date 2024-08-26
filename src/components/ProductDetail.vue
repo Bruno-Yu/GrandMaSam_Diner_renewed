@@ -2,19 +2,13 @@
   <div v-if="detailDisplay">
     <div class="card mb-3">
       <!-- 產品封面圖片 imageUrl-->
-      <img
-        :src="productDisplay.imageUrl"
-        class="card-img-top primary-image"
-        alt="主圖"
-      />
+      <img :src="productDisplay.imageUrl" class="card-img-top primary-image" alt="主圖" />
       <!--  產品內文 -->
       <div class="card-body">
         <h5 class="card-title">
           {{ productDisplay.title }}
           <!--title -->
-          <span class="badge bg-primary ms-2">{{
-            productDisplay.category
-          }}</span>
+          <span class="badge bg-primary ms-2">{{ productDisplay.category }}</span>
         </h5>
         <!--description-->
         <p class="card-text">商品描述：{{ productDisplay.description }}</p>

@@ -1,18 +1,16 @@
 <template>
-<PageLoading
-  loader="bars"
-  :active="isLoading"
-  :can-cancel="true"
-  :is-full-page="false"
-></PageLoading>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
 
   <div class="container">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <RouterLink class="text-muted fw-bold" to="/user/articles"
-            >公告列表</RouterLink
-          >
+          <RouterLink class="text-muted fw-bold" to="/user/articles">公告列表</RouterLink>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
           {{ article.title }}
@@ -65,10 +63,7 @@
           class="img-fluid mb-5 border border-5 border-dark"
         />
         <blockquote class="blockquote">
-          <p
-            class="fs-4 fw-bolder mb-4 text-decoration-underline"
-            v-html="article.description"
-          ></p>
+          <p class="fs-4 fw-bolder mb-4 text-decoration-underline" v-html="article.description"></p>
         </blockquote>
         <div class="fs-5 lh-lg mb-5" v-html="article.content" />
         <br />

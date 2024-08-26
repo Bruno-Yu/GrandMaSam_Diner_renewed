@@ -13,9 +13,7 @@
         class="col col-lg-5 me-lg-5 bg-dark border border-light border-1 rounded-3 dialog-theEnd-bg"
       >
         <div class="container p-3">
-          <h3 class="my-3 fw-bolder text-light font-Noto fw-600">
-            台灣毀滅RIP
-          </h3>
+          <h3 class="my-3 fw-bolder text-light font-Noto fw-600">台灣毀滅RIP</h3>
           <p class="text-light fw-bold">我們最不想發生的事情終究還還是發生了</p>
           <p class="text-light fw-bold">
             但還好本集團創辦人早已提前洞悉這可能性，體恤在地民眾沒有精神寄託，特別開設了拜燈神教的東亞分部，讓在地民眾在這末日有個精神寄託，其總部分部就在台北
@@ -23,9 +21,7 @@
           <p class="text-light fw-bold">
             我們推廣合意信教制，讓您不論在身體上、心理上皆能獲得滿足!
           </p>
-          <p class="text-light fs-4 font-Noto fw-600">
-            女士們先生們 今晚你們想信教嗎?
-          </p>
+          <p class="text-light fs-4 font-Noto fw-600">女士們先生們 今晚你們想信教嗎?</p>
           <p class="text-light d-none d-lg-inline-block fw-light">
             特此聲明:
             我們是拜燈神教，並不拜月，有請各位為拯救趙靈兒的少俠們多保養眼睛，避免誤闖，造成本餐飲正在用餐的貴賓困擾，感謝!

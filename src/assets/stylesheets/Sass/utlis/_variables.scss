@@ -362,11 +362,7 @@ $variable-prefix: bs- !default;
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
 // scss-docs-start variable-gradient
-$gradient: linear-gradient(
-  180deg,
-  rgba($white, 0.15),
-  rgba($white, 0)
-) !default;
+$gradient: linear-gradient(180deg, rgba($white, 0.15), rgba($white, 0)) !default;
 // scss-docs-end variable-gradient
 
 // Spacing
@@ -386,11 +382,7 @@ $spacers: (
   5: $spacer * 3,
 ) !default;
 
-$negative-spacers: if(
-  $enable-negative-margins,
-  negativify-map($spacers),
-  null
-) !default;
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -431,12 +423,7 @@ $utilities-text: map-merge(
     'body': to-rgb($body-color),
   )
 ) !default;
-$utilities-text-colors: map-loop(
-  $utilities-text,
-  rgba-css-var,
-  '$key',
-  'text'
-) !default;
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, '$key', 'text') !default;
 // scss-docs-end utilities-text-colors
 
 // scss-docs-start utilities-bg-colors
@@ -448,12 +435,7 @@ $utilities-bg: map-merge(
     'body': to-rgb($body-bg),
   )
 ) !default;
-$utilities-bg-colors: map-loop(
-  $utilities-bg,
-  rgba-css-var,
-  '$key',
-  'bg'
-) !default;
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, '$key', 'bg') !default;
 // scss-docs-end utilities-bg-colors
 
 // Links
@@ -588,11 +570,11 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto,
-  'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
-  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-  'Liberation Mono', 'Courier New', monospace !default;
+$font-family-sans-serif: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+  monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base: var(--#{$variable-prefix}font-sans-serif) !default;
 $font-family-code: var(--#{$variable-prefix}font-monospace) !default;
@@ -764,13 +746,9 @@ $input-btn-line-height: $line-height-base !default;
 
 $input-btn-focus-width: 0.25rem !default;
 $input-btn-focus-color-opacity: 0.25 !default;
-$input-btn-focus-color: rgba(
-  $component-active-bg,
-  $input-btn-focus-color-opacity
-) !default;
+$input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-blur: 0 !default;
-$input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
-  $input-btn-focus-color !default;
+$input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-padding-y-sm: 0.25rem !default;
 $input-btn-padding-x-sm: 0.5rem !default;
@@ -892,18 +870,9 @@ $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;
 
-$input-height-inner: add(
-  $input-line-height * 1em,
-  $input-padding-y * 2
-) !default;
-$input-height-inner-half: add(
-  $input-line-height * 0.5em,
-  $input-padding-y
-) !default;
-$input-height-inner-quarter: add(
-  $input-line-height * 0.25em,
-  $input-padding-y * 0.5
-) !default;
+$input-height-inner: add($input-line-height * 1em, $input-padding-y * 2) !default;
+$input-height-inner-half: add($input-line-height * 0.5em, $input-padding-y) !default;
+$input-height-inner-quarter: add($input-line-height * 0.25em, $input-padding-y * 0.5) !default;
 
 $input-height: add(
   $input-line-height * 1em,
@@ -1005,8 +974,7 @@ $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 $form-select-feedback-icon-padding-end: $form-select-padding-x * 2.5 +
   $form-select-indicator-padding !default;
 $form-select-feedback-icon-position: center right $form-select-indicator-padding !default;
-$form-select-feedback-icon-size: $input-height-inner-half
-  $input-height-inner-half !default;
+$form-select-feedback-icon-size: $input-height-inner-half $input-height-inner-half !default;
 
 $form-select-border-width: $input-border-width !default;
 $form-select-border-color: $input-border-color !default;
@@ -1015,8 +983,7 @@ $form-select-box-shadow: $box-shadow-inset !default;
 
 $form-select-focus-border-color: $input-focus-border-color !default;
 $form-select-focus-width: $input-focus-width !default;
-$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width
-  $input-btn-focus-color !default;
+$form-select-focus-box-shadow: 0 0 0 $form-select-focus-width $input-btn-focus-color !default;
 
 $form-select-padding-y-sm: $input-padding-y-sm !default;
 $form-select-padding-x-sm: $input-padding-x-sm !default;
@@ -1049,8 +1016,8 @@ $form-range-thumb-focus-box-shadow: 0 0 0 1px $body-bg, $input-focus-box-shadow 
 $form-range-thumb-focus-box-shadow-width: $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg: tint-color($component-active-bg, 70%) !default;
 $form-range-thumb-disabled-bg: $gray-500 !default;
-$form-range-thumb-transition: background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$form-range-thumb-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+  box-shadow 0.15s ease-in-out !default;
 // scss-docs-end form-range-variables
 
 // scss-docs-start form-file-variables
@@ -1067,8 +1034,7 @@ $form-floating-padding-y: 1rem !default;
 $form-floating-input-padding-t: 1.625rem !default;
 $form-floating-input-padding-b: 0.625rem !default;
 $form-floating-label-opacity: 0.65 !default;
-$form-floating-label-transform: scale(0.85) translateY(-0.5rem)
-  translateX(0.15rem) !default;
+$form-floating-label-transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem) !default;
 $form-floating-transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out !default;
 // scss-docs-end form-floating-variables
 
@@ -1126,8 +1092,8 @@ $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;
 $nav-link-color: $link-color !default;
 $nav-link-hover-color: $link-hover-color !default;
-$nav-link-transition: color 0.15s ease-in-out,
-  background-color 0.15s ease-in-out, border-color 0.15s ease-in-out !default;
+$nav-link-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out !default;
 $nav-link-disabled-color: $gray-600 !default;
 
 $nav-tabs-border-color: $gray-300 !default;
@@ -1202,10 +1168,7 @@ $dropdown-bg: $white !default;
 $dropdown-border-color: rgba($black, 0.15) !default;
 $dropdown-border-radius: $border-radius !default;
 $dropdown-border-width: $border-width !default;
-$dropdown-inner-border-radius: subtract(
-  $dropdown-border-radius,
-  $dropdown-border-width
-) !default;
+$dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width) !default;
 $dropdown-divider-bg: $dropdown-border-color !default;
 $dropdown-divider-margin-y: $spacer * 0.5 !default;
 $dropdown-box-shadow: $box-shadow !default;
@@ -1275,9 +1238,8 @@ $pagination-disabled-color: $gray-600 !default;
 $pagination-disabled-bg: $white !default;
 $pagination-disabled-border-color: $gray-300 !default;
 
-$pagination-transition: color 0.15s ease-in-out,
-  background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-  box-shadow 0.15s ease-in-out !default;
+$pagination-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
 
 $pagination-border-radius-sm: $border-radius-sm !default;
 $pagination-border-radius-lg: $border-radius-lg !default;
@@ -1300,10 +1262,7 @@ $card-border-width: $border-width !default;
 $card-border-color: rgba($black, 0.125) !default;
 $card-border-radius: $border-radius !default;
 $card-box-shadow: null !default;
-$card-inner-border-radius: subtract(
-  $card-border-radius,
-  $card-border-width
-) !default;
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y: $card-spacer-y * 0.5 !default;
 $card-cap-padding-x: $card-spacer-x !default;
 $card-cap-bg: rgba($black, 0.03) !default;
@@ -1391,10 +1350,7 @@ $popover-max-width: 276px !default;
 $popover-border-width: $border-width !default;
 $popover-border-color: rgba($black, 0.2) !default;
 $popover-border-radius: $border-radius-lg !default;
-$popover-inner-border-radius: subtract(
-  $popover-border-radius,
-  $popover-border-width
-) !default;
+$popover-inner-border-radius: subtract($popover-border-radius, $popover-border-width) !default;
 $popover-box-shadow: $box-shadow !default;
 
 $popover-header-bg: shade-color($popover-bg, 6%) !default;

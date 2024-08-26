@@ -1,10 +1,10 @@
 <template>
-<PageLoading
-  loader="bars"
-  :active="isLoading"
-  :can-cancel="true"
-  :is-full-page="false"
-></PageLoading>
+  <PageLoading
+    loader="bars"
+    :active="isLoading"
+    :can-cancel="true"
+    :is-full-page="false"
+  ></PageLoading>
 
   <div class="mb-5 p-5">
     <h2 class="my-5 ms-2 fw-bold text-center">優惠券管理頁面</h2>
@@ -59,11 +59,7 @@
       ref="couponDetail"
       @update-coupon="updateCoupon"
     ></CouponDetail>
-    <OrderDelete
-      :item="couponShow"
-      ref="delModal"
-      @del-item="delCoupon"
-    ></OrderDelete>
+    <OrderDelete :item="couponShow" ref="delModal" @del-item="delCoupon"></OrderDelete>
   </div>
 </template>
 
